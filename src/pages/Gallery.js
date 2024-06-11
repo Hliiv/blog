@@ -3,8 +3,6 @@ import pic1 from '../images/pic1.jpeg';
 import pic2 from '../images/pic2.jpeg'; 
 
 
-
-
 export default function Gallery() {
     return (
         <div className="Gallery">
