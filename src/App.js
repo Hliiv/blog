@@ -1,7 +1,7 @@
 import './App.css';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"; // Import Link here
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
@@ -18,7 +18,7 @@ export default function App() {
       <br></br>
       <br></br>
       <h1><img className="image" src={reisiblogi} alt='blogi'
-      />Wandering Heidi  </h1>
+      />Wandering Heidi</h1>
       <br></br>
       <br></br>
       <Routes>
@@ -32,9 +32,10 @@ export default function App() {
       </Routes>
       <div className="footer">
         <h3>GET IN TOUCH <br></br>
-          Feel free to <a href="/contact">contact me</a> if you have travel questions, comments, or suggestions!
+          Feel free to <Link to="/contact">contact me</Link> if you have travel questions, comments, or suggestions!
           I'll try to get back to you!
         </h3>
+        
         <div className="social-media">
           <a href="https://www.instagram.com/yourprofile">
             <i className="fab fa-instagram"></i>
