@@ -36,15 +36,15 @@ export default function App() {
           I'll try to get back to you!
         </h3>
         <div className="social-media">
-          <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/yourprofile">
             <i className="fab fa-instagram"></i>
           </a>
 
-          <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/yourprofile" >
             <i className="fab fa-facebook"></i>
           </a>
 
-          <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/yourchannel"  >
             <i className="fab fa-youtube"></i>
           </a>
         </div>
