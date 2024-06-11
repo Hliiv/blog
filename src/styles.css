@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+h1 {
+    color: grey;
+    font-family: 'Goudy Bookletter 1911';
+    text-align: center;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image {
+    width: 200px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #afa9a9;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Layout */
+.layout {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+ .footer h3{
+    color: grey;
+    font-size: 20px;
+
+ }
+/* Home page */
+.home {
+    display: flex 1;
+    flex-direction: column;
+    padding: 50px 0;
+    background-image: url('https://wallpapershome.com/images/pages/pic_h/378.jpg');
+    height: 100vh;
+    background-size: cover;
+    font-size: 40px;
+    background-repeat: no-repeat;
+    color:grey
+}
+
+.home h2 {
+    color: #3498db;
+}
+
+.home p1 {
+    color:  whitesmoke;
+    font-size: 35px;
+    text-align: left;
+   
+}
+.home p2 {
+    color:whitesmoke;
+    font-size: 20px;
+}
+
+/* Blogs page */
+.blogs {
+    display: flex 1;
+    padding: 100px 0;
+    height: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2015/05/Blue-Sea-HD-desktop-background.jpg');
+}
+
+
+.blogs h2 {
+    color: #3498db;
+    font-size: 30px;
+}
+
+.blog-post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.blog-post h3 {
+    margin: 0;
+    color: whitesmoke;
+   
+}
+.blogs p {
+    color: rgb(33, 31, 31);
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Contact page */
+.contact {
+    padding: 100px 0;
+    height: 100vh;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2015/05/Boat-on-the-Blue-Sea-Wallpaper-HD.jpg');
+}
+
+.contact h2 {
+    color:whitesmoke;
+    font: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* No Page (404) */
+.no-page {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.no-page h2 {
+    color: #e74c3c;
+}
+.Gallery h1{
+    color:#3498db
+}
+.Gallery  h2 {
+    color:#3498db
+}
+.Gallery {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
