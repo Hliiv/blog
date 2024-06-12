@@ -52,14 +52,12 @@ nav a:hover {
 
 .layout {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
     align-items: center;
 }
   
-
-
 
 /* Main content */
 .main-content {
@@ -88,15 +86,16 @@ footer {
  }
 /* Home page */
 .home {
-    display: flex 1;
+    display: flex ;
     flex-direction: column;
     padding: 50px 0;
     background-image: url('https://wallpapershome.com/images/pages/pic_h/378.jpg');
     height: 100vh;
     background-size: cover;
-    font-size: 40px;
     background-repeat: no-repeat;
-    color:grey
+    background-position: center;
+    font-size: 40px;
+    color: grey;
 }
 
 .home h2 {
@@ -105,7 +104,7 @@ footer {
 
 .home p1 {
     color:  whitesmoke;
-    font-size: 35px;
+    font-size: 25px;
     text-align: left;
    
 }
@@ -117,13 +116,10 @@ footer {
 /* Blogs page */
 .blogs {
     display: flex 1;
-    padding: 100px 0;
-    height: 100vh;
-    height: 100vh;
     background-size: cover;
+    background-position: center;
     background-image: url('https://www.pixelstalk.net/wp-content/uploads/2015/05/Blue-Sea-HD-desktop-background.jpg');
 }
-
 
 .blogs h2 {
     color: whitesmoke;
@@ -148,7 +144,9 @@ footer {
 
 /* Contact page */
 .contact {
-    padding: 100px 0;
+    display: flex 1;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     background-image: url('https://www.pixelstalk.net/wp-content/uploads/2015/05/Boat-on-the-Blue-Sea-Wallpaper-HD.jpg');
 }
@@ -159,7 +157,7 @@ footer {
 }
 
 .contact-form {
-    display: flex;
+    display: flex ;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
@@ -194,7 +192,7 @@ footer {
     color:#3498db
 }
 .Gallery {
-    display: flex;
+    display: flex 1;
     flex-direction: column;
     text-align: center;
 
