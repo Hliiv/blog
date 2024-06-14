@@ -57,7 +57,7 @@ nav a:hover {
     width: 100%;
     align-items: center;
 }
-  
+
 
 /* Main content */
 .main-content {
@@ -79,14 +79,15 @@ footer {
     width: 100%;
 }
 
- .footer h3{
+.footer h3 {
     color: grey;
     font-size: 20px;
 
- }
+}
+
 /* Home page */
 .home {
-    display: flex ;
+    display: flex;
     flex-direction: column;
     padding: 50px 0;
     background-image: url('https://wallpapershome.com/images/pages/pic_h/378.jpg');
@@ -96,6 +97,7 @@ footer {
     background-position: center;
     font-size: 40px;
     color: grey;
+
 }
 
 .home h2 {
@@ -103,13 +105,14 @@ footer {
 }
 
 .home p1 {
-    color:  whitesmoke;
+    color: whitesmoke;
     font-size: 25px;
     text-align: left;
-   
+
 }
+
 .home p2 {
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 20px;
 }
 
@@ -134,8 +137,9 @@ footer {
 .blog-post h3 {
     margin: 0;
     color: whitesmoke;
-   
+
 }
+
 .blogs p {
     color: rgb(33, 31, 31);
     font-size: 20px;
@@ -152,12 +156,12 @@ footer {
 }
 
 .contact h2 {
-    color:whitesmoke;
+    color: whitesmoke;
     font: 20px;
 }
 
 .contact-form {
-    display: flex ;
+    display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
@@ -185,16 +189,20 @@ footer {
 .no-page h2 {
     color: #e74c3c;
 }
-.Gallery h1{
-    color:#3498db
+
+.Gallery h1 {
+    color: #3498db
 }
-.Gallery  h2 {
-    color:#3498db
+
+.Gallery h2 {
+    color: #3498db
 }
+
 .Gallery {
     display: flex 1;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    background-color: grey;
 
 }
-

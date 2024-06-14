@@ -1,55 +1,73 @@
 import './App.css';
-import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"; // Import Link here
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
-import reisiblogi from "./reisiblogi-logo.png";
-import Gallery from "./pages/Gallery";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import Services from './pages/Services';
+import { useEffect, useState } from 'react';
+import Post from './pages/Post';
+import { getAllPosts } from './utils.js'
+
 
 export default function App() {
+  const [posts, setPosts] = useState([
+    {
+      id: '23423rwer3',
+      title: 'Minu esimene blogipostitus',
+      content: 'asödfjasdöflkajd öalsjd föalsdf öalkjdf aöldfkja fölakjf aölsdfk aöldkfj aöldfkj aölfkja döaldk faölsdkfj alöfdk '
+    },
+    {
+      id: '2324243477',
+      title: 'Minu Teine blogipostitus',
+      content: 'erwer rterte öalsjd föalsdf öalkjdf aöldfkja fölakjf aölsdfk aöldkfj aöldfkj aölfkja döaldk faölsdkfj alöfdk '
+    },
+    {
+      id: '123hgh676',
+      title: 'Minu kolmas blogipostitus',
+      content: 'slödfgkj sdöflgkjsdfgsöldkfgj  fölakjf aölsdfk aöldkfj aöldfkj aölfkja döaldk faölsdkfj alöfdk '
+    },
+    {
+      id: 'utyyut68768',
+      title: 'Minu neljas blogipostitus',
+      content: 'slödfgkj sdöflgkjsdfgsöldkfgj  fölakjf aölsdfk aöldkfj aöldfkj aölfkja döaldk faölsdkfj alöfdk '
+    },
+  ])
+
+  const fetchPosts = async () => {
+    let allData = await getAllPosts();
+    let posts = allData.filter(p => p.sys.contentType.sys.id === 'post')
+    console.log(posts)
+    setPosts(posts.map((p => {
+      return {
+        id: p.sys.id,
+        title: p.fields.title,
+        content: p.fields.snipet
+      }
+    })))
+  }
+
+  useEffect(() => {
+    fetchPosts()
+  }, [])
+
   return (
     <BrowserRouter>
-      <br></br>
-      <br></br>
-      <br></br>
-      <h1><img className="image" src={reisiblogi} alt='blogi'
-      />Wandering Heidi</h1>
-      <br></br>
-      <br></br>
+      <h1>Header</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="gallery" element={<Gallery />} />
+          <Route path="blogs" element={<Blogs posts={posts} />} />
+          <Route path="post/:postId" element={<Post posts={posts} />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="services" element={<Services />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-      <div className="footer">
-        <h3>GET IN TOUCH <br></br>
-          Feel free to <Link to="/contact">contact me</Link> if you have travel questions, comments, or suggestions!
-          I'll try to get back to you!
-        </h3>
-        
-        <div className="social-media">
-          <a href="https://www.instagram.com/yourprofile">
-            <i className="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://www.facebook.com/yourprofile" >
-            <i className="fab fa-facebook"></i>
-          </a>
-
-          <a href="https://www.youtube.com/yourchannel"  >
-            <i className="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
+      <h3>Footer</h3>
     </BrowserRouter>
   );
 }
